@@ -1,12 +1,69 @@
 {
-  "name":    "innogames-xmlsimple",
+  "name": "innogames-xmlsimple",
   "version": "0.1.0",
   "author": "InnoGames GmbH",
-  "license": "Apache-2.0",
   "summary": "Functions to convert back and forth between XML and Hashes",
-  "description": "These module includes the \'xml-simple\' gem to convert data back and forth between XML and Hashes. Fork of glarizza-xmlsimple module",
+  "license": "Apache-2.0",
   "source": "http://github.com/innogames/puppet-xmlsimple",
-  "issues_url": "https://github.com/innogames/puppet-xmlsimple/issues",
   "project_page": "http://github.com/innogames/puppet-xmlsimple",
-  "dependencies": []
+  "issues_url": "https://github.com/innogames/puppet-xmlsimple/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2008 R2",
+        "2012 R2",
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 7.0.0"
+    }
+  ],
+  "description": "These module includes the 'xml-simple' gem to convert data back and forth between XML and Hashes. Fork of glarizza-xmlsimple module",
+  "pdk-version": "1.7.1",
+  "template-url": "https://github.com/puppetlabs/pdk-templates.git",
+  "template-ref": "heads/master-0-gf3cfde2"
 }
