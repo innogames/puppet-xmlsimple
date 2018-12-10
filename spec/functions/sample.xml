@@ -1,0 +1,9 @@
+<root>
+  <node attr="val1">
+    <subnode>1</subnode>
+    <subnode>2</subnode>
+  </node>
+  <node attr="val2">
+    <empty_tag />
+  </node>
+</root>
