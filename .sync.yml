@@ -9,7 +9,7 @@ Gemfile:
   spec_overrides: >-
     RSpec.configure do |c|
       c.after(:suite) do
-        RSpec::Puppet::Coverage.report!(96)
+        RSpec::Puppet::Coverage.report!
       end
     end
 .travis.yml:
