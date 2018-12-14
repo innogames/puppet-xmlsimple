@@ -1,5 +1,4 @@
 ---
-sudo: false
 dist: trusty
 language: ruby
 cache: bundler
@@ -17,6 +16,11 @@ rvm:
 env:
   global:
     - BEAKER_PUPPET_COLLECTION=puppet6 PUPPET_GEM_VERSION="~> 6.0"
+stages:
+  - test
+  -
+    if: tag =~ ^v
+    name: deploy
 matrix:
   fast_finish: true
   include:
@@ -30,6 +34,9 @@ matrix:
     -
       env: PUPPET_GEM_VERSION="~> 4.0" CHECK=parallel_spec
       rvm: 2.1.9
+    -
+      env: CHECK='build' DEPLOY_TO_FORGE=yes
+      stage: deploy
 branches:
   only:
     - master

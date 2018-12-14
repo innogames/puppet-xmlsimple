@@ -65,5 +65,5 @@
   "description": "These module includes the 'xml-simple' gem to convert data back and forth between XML and Hashes. Fork of glarizza-xmlsimple module",
   "pdk-version": "1.7.1",
   "template-url": "https://github.com/puppetlabs/pdk-templates.git",
-  "template-ref": "heads/master-0-gf3cfde2"
+  "template-ref": "heads/master-0-gbf720df"
 }
