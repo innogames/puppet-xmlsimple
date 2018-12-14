@@ -29,6 +29,7 @@ group :development do
 end
 group :dependencies do
   gem "xml-simple", require: false
+  gem "redcarpet",  require: false
 end
 
 puppet_version = ENV['PUPPET_GEM_VERSION']
