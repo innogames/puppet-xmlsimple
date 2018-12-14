@@ -57,77 +57,24 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h2>XmlSimple Puppet Functions</h2>
+      <div id="content"><div id='filecontents'><h1>Description</h1>
 
-<p>These Puppet functions will convert a hash into an XML string that can be
-saved as the contents of a file.  There is also a function that will accept
-an argument of a path to an XML document and return a native Hash. Hopefully
-these are useful to some people out there.  Check out the <code>tests/</code> directory
-for Puppet manifests demonstrating their usage:</p>
+<p>This module provides two functions to convert Hash objects to xml strings and
+vice versa. The usage is described in <a href="./REFERENCE.md">REFERENCE.md</a>
+This module is forked from the <a href="https://forge.puppet.com/glarizza/xmlsimple">https://forge.puppet.com/glarizza/xmlsimple</a></p>
 
-<h2>NOTE - REQUIRES &#39;xml-simple&#39; GEM!</h2>
+<h1>Setup</h1>
 
-<p>Do note, you need to install the &#39;xml-simple&#39; gem with the following command:</p>
+<p>This module requires for gem <code>xml-simple</code>. Install it with following command:
+    gem install xml-simple</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_xml'>xml</span><span class='op'>-</span><span class='id identifier rubyid_simple'>simple</span>
-</code></pre>
+<h1>Limitations</h1>
 
-<h3>Converting an XML document to a Hash</h3>
+<p>As far as we know, it should work on any system</p>
 
-<pre class="code ruby"><code class="ruby"><span class='gvar'>$xml</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/tmp/sample.xml</span><span class='tstring_end'>&#39;</span></span>
-<span class='gvar'>$hash_data</span> <span class='op'>=</span> <span class='id identifier rubyid_xml_to_hash'>xml_to_hash</span><span class='lparen'>(</span><span class='gvar'>$xml</span><span class='rparen'>)</span>
-</code></pre>
+<h1>Development</h1>
 
-<h3>Converting a Hash to an XML document</h3>
-
-<pre class="code ruby"><code class="ruby">$hash = {
-  &#39;logdir&#39;        =&gt; &#39;/var/log/foo/&#39;,
-    &#39;debugfile&#39;     =&gt; &#39;/tmp/foo.debug&#39;,
-    &#39;server&#39;        =&gt; {
-      &#39;sahara&#39;        =&gt; {
-        &#39;osversion&#39;     =&gt; &#39;2.6&#39;,
-        &#39;osname&#39;        =&gt; &#39;solaris&#39;,
-        &#39;address&#39;       =&gt; [ &#39;10.0.0.101&#39;, &#39;10.0.1.101&#39; ]
-      },
-      &#39;gobi&#39;          =&gt; {
-        &#39;osversion&#39;     =&gt; &#39;6.5&#39;,
-        &#39;osname&#39;        =&gt; &#39;irix&#39;,
-        &#39;address&#39;       =&gt; [ &#39;10.0.0.102&#39; ]
-      },
-      &#39;kalahari&#39;      =&gt; {
-        &#39;osversion&#39;     =&gt; &#39;2.0.34&#39;,
-        &#39;osname&#39;        =&gt; &#39;linux&#39;,
-        &#39;address&#39;       =&gt; [ &#39;10.0.0.103&#39;, &#39;10.0.1.103&#39; ]
-      }
-    }
-}
-
-$xml_data = hash_to_xml($hash)
-
-file { &#39;/tmp/sample.xml&#39;:
-  ensure  =&gt; file,
-  content =&gt; $xml_data
-}
-</code></pre>
-
-<h3>The resultant output XML file:</h3>
-
-<pre class="code ruby"><code class="ruby">&lt;opt logdir=&quot;/var/log/foo/&quot; debugfile=&quot;/tmp/foo.debug&quot;&gt;
-  &lt;server&gt;
-    &lt;sahara osversion=&quot;2.6&quot; osname=&quot;solaris&quot;&gt;
-      &lt;address&gt;10.0.0.101&lt;/address&gt;
-      &lt;address&gt;10.0.1.101&lt;/address&gt;
-    &lt;/sahara&gt;
-    &lt;gobi osversion=&quot;6.5&quot; osname=&quot;irix&quot;&gt;
-      &lt;address&gt;10.0.0.102&lt;/address&gt;
-    &lt;/gobi&gt;
-    &lt;kalahari osversion=&quot;2.0.34&quot; osname=&quot;linux&quot;&gt;
-      &lt;address&gt;10.0.0.103&lt;/address&gt;
-      &lt;address&gt;10.0.1.103&lt;/address&gt;
-    &lt;/kalahari&gt;
-  &lt;/server&gt;
-&lt;/opt&gt;
-</code></pre>
+<p>Fork this project, develop, make pull request and wait for correspondin auto tests will be done.</p>
 </div></div>
 
       <div id="footer">
