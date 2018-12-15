@@ -1,8 +1,8 @@
 {
   "name": "innogames-xmlsimple",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "InnoGames GmbH",
-  "summary": "Functions to convert back and forth between XML and Hashes",
+  "summary": "Functions to convert back and forth between XML and Hashes via xml-simple",
   "license": "Apache-2.0",
   "source": "http://github.com/innogames/puppet-xmlsimple",
   "project_page": "http://github.com/innogames/puppet-xmlsimple",
@@ -11,6 +11,14 @@
 
   ],
   "operatingsystem_support": [
+    {
+      "operatingsystem": "FreeBSD",
+      "operatingsystemrelease": [
+        "10",
+        "11",
+        "12"
+      ]
+    },
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
@@ -38,13 +46,15 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "8"
+        "8",
+        "9"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "16.04"
+        "16.04",
+        "18.04"
       ]
     },
     {
@@ -63,7 +73,7 @@
     }
   ],
   "description": "These module includes the 'xml-simple' gem to convert data back and forth between XML and Hashes. Fork of glarizza-xmlsimple module",
-  "pdk-version": "1.7.1",
+  "pdk-version": "1.8.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates.git",
-  "template-ref": "heads/master-0-gbf720df"
+  "template-ref": "heads/master-0-g20af4c6"
 }
