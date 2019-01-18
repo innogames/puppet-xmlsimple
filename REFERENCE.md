@@ -20,7 +20,7 @@ Function that converts a hash to an XML string
 
 Function that converts a hash to an XML string
 
-Returns: `String` xml is generated from $data
+Returns: `String` xml is generated from `$data`
 
 ##### `data`
 

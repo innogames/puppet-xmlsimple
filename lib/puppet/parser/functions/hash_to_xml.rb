@@ -6,7 +6,7 @@ Puppet::Parser::Functions.newfunction(
 
   @param [Hash] data Hash to be converted into xml
   @param [Hash] options (optional) second parameter will be passed into XmlSimple.xml_out
-  @return [String] xml is generated from $data
+  @return [String] xml is generated from `$data`
   EOS
 ) do |args|
   if args.empty? || args.length > 2
