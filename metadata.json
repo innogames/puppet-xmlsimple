@@ -1,6 +1,6 @@
 {
   "name": "innogames-xmlsimple",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "author": "InnoGames GmbH",
   "summary": "Functions to convert back and forth between XML and Hashes via xml-simple",
   "license": "Apache-2.0",
@@ -73,7 +73,7 @@
     }
   ],
   "description": "These module includes the 'xml-simple' gem to convert data back and forth between XML and Hashes. Fork of glarizza-xmlsimple module",
-  "pdk-version": "1.8.0",
-  "template-url": "https://github.com/puppetlabs/pdk-templates.git",
-  "template-ref": "heads/master-0-g20af4c6"
+  "pdk-version": "1.18.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates.git#master",
+  "template-ref": "heads/master-0-g9c14433"
 }
