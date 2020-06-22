@@ -12,13 +12,25 @@
 
 ### hash_to_xml
 
-Type: Ruby 3.x API
+Type: Ruby 4.x API
 
 Function that converts a hash to an XML string
+
+#### `hash_to_xml(Hash $data)`
+
+The hash_to_xml function.
+
+Returns: `String` xml is generated from `$data`
+
+##### `data`
+
+Data type: `Hash`
+
+Hash to be converted into xml
 
 #### `hash_to_xml(Hash $data, Hash $options)`
 
-Function that converts a hash to an XML string
+The hash_to_xml function.
 
 Returns: `String` xml is generated from `$data`
 
@@ -32,21 +44,33 @@ Hash to be converted into xml
 
 Data type: `Hash`
 
-(optional) second parameter will be passed into XmlSimple.xml_out
+The second parameter will be passed into XmlSimple.xml_out
 
 ### xml_to_hash
 
-Type: Ruby 3.x API
+Type: Ruby 4.x API
 
 Function to convert an xml file into a hash via xml-simple
 
-#### `xml_to_hash(String $xml, Hash $options)`
+#### `xml_to_hash(String $xml_file)`
 
-Function to convert an xml file into a hash via xml-simple
+The xml_to_hash function.
 
 Returns: `Hash` data are converted from xml
 
-##### `xml`
+##### `xml_file`
+
+Data type: `String`
+
+Local file name to be passed into XmlSimple.xml_in
+
+#### `xml_to_hash(String $xml_file, Hash $options)`
+
+The xml_to_hash function.
+
+Returns: `Hash` data are converted from xml
+
+##### `xml_file`
 
 Data type: `String`
 
