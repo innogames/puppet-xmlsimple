@@ -46,12 +46,12 @@ describe 'xml_to_hash' do
   end
 
   it do
-    is_expected.to run.with_params.and_raise_error(Puppet::Error, '#xml_to_hash accepts only one(1) or two(2) arguments, you passed 0')
+    is_expected.to run.with_params.and_raise_error(ArgumentError, "'xml_to_hash' expects between 1 and 2 arguments, got none")
   end
 
   it do
     is_expected.to run.with_params(
       sample, { 'KeepRoot' => true }, 'arg3'
-    ).and_raise_error(Puppet::Error, '#xml_to_hash accepts only one(1) or two(2) arguments, you passed 3')
+    ).and_raise_error(ArgumentError, "'xml_to_hash' expects between 1 and 2 arguments, got 3")
   end
 end

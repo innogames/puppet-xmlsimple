@@ -59,6 +59,6 @@ describe 'hash_to_xml' do
   it do
     is_expected.to run.with_params(
       test_data, { 'KeepRoot' => true }, 'third arg'
-    ).and_raise_error(Puppet::Error, '#hash_to_xml accepts only one (1) or two (2) arguments, you passed 3')
+    ).and_raise_error(ArgumentError, "'hash_to_xml' expects between 1 and 2 arguments, got 3")
   end
 end
